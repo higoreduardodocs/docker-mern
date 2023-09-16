@@ -1,8 +1,13 @@
 version: '3'
 
 services:
+  client:
+    image: higoreduardodocs/docker-mern-client
+    container_name: client
+
   server:
     build: ./server
+    image: higoreduardodocs/docker-mern-server
     container_name: server
     depends_on:
       - mongo
