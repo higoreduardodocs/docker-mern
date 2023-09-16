@@ -1,0 +1,33 @@
+@server=http://localhost:3001/api/v1
+@endPoint=posts
+@postId=6505b3334467399e320c708e
+
+### POST /
+POST {{ server }}/{{ endPoint }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Título",
+  "body": "Corpo"
+}
+
+### GET /
+GET {{ server }}/{{ endPoint }} HTTP/1.1
+
+### PUT /:id
+PUT {{ server }}/{{ endPoint }}/{{ postId }} HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Título",
+  "body": "Corpo 2"
+}
+
+### GET /:id
+GET {{ server }}/{{ endPoint }}/{{ postId }} HTTP/1.1
+
+### DELETE /:id
+DELETE {{ server }}/{{ endPoint }}/{{ postId }} HTTP/1.1
+
+### GET /seed
+GET {{ server }}/{{ endPoint }}/seed HTTP/1.1
