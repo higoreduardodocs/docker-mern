@@ -3,18 +3,18 @@ version: '3'
 services:
   client:
     image: higoreduardodocs/docker-mern-client
-    container_name: client
+    # container_name: client
 
   server:
     build: ./server
     image: higoreduardodocs/docker-mern-server
-    container_name: server
+    # container_name: server
     depends_on:
       - mongo
 
   mongo:
     image: mongo:4.4-bionic
-    container_name: mongo
+    # container_name: mongo
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=admin
